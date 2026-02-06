@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Task 4 - Positioning</title>
+<style>
+    body {
+        font-family: Arial;
+    }
+
+    nav {
+        position: sticky;
+        top: 0;
+        background: #222;
+        color: white;
+        padding: 15px;
+    }
+
+    .container {
+        position: relative;
+        height: 300px;
+        background: #ddd;
+        margin: 30px;
+        padding: 20px;
+    }
+
+    .absolute {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: tomato;
+        padding: 10px;
+        color: white;
+    }
+
+    .fixed {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: black;
+        color: white;
+        padding: 10px;
+    }
+</style>
+</head>
+<body>
+
+<nav>Sticky Navigation</nav>
+
+<div class="container">
+    Relative Container
+    <div class="absolute">Absolute Box</div>
+</div>
+
+<div class="fixed">Fixed Box</div>
+
+</body>
+</html>

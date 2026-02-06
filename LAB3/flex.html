@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Task 3 - Flexbox</title>
+<style>
+    body {
+        font-family: Arial;
+        margin: 0;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+        background: #333;
+        padding: 15px;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+    }
+
+    nav a:hover {
+        color: yellow;
+    }
+
+    .cards {
+        display: flex;
+        gap: 20px;
+        padding: 30px;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: 200px;
+        background: #f1f1f1;
+        padding: 20px;
+        border-radius: 8px;
+    }
+</style>
+</head>
+<body>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+</nav>
+
+<div class="cards">
+    <div class="card">Card One</div>
+    <div class="card">Card Two</div>
+    <div class="card">Card Three</div>
+</div>
+
+</body>
+</html>

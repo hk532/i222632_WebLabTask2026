@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Task 2 - Grid</title>
+<style>
+    body {
+        font-family: Arial;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        grid-template-rows: 60px 1fr 50px;
+        gap: 10px;
+        height: 100vh;
+    }
+
+    .header { grid-column: 1 / -1; background: #ffb703; }
+    .sidebar { background: #8ecae6; }
+    .main { background: #caf0f8; }
+    .footer { grid-column: 1 / -1; background: #ffb703; }
+
+    div {
+        padding: 20px;
+    }
+</style>
+</head>
+<body>
+
+<div class="grid">
+    <div class="header">Header</div>
+    <div class="sidebar">Sidebar</div>
+    <div class="main">Main Content</div>
+    <div class="footer">Footer</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Task 6 - Integrated</title>
+<style>
+    body {
+        font-family: Arial;
+        background: #f4f6f8;
+    }
+
+    .page {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 20px;
+        padding: 30px;
+    }
+
+    .sidebar {
+        background: #90dbf4;
+        padding: 20px;
+    }
+
+    .content {
+        background: white;
+        padding: 20px;
+        position: relative;
+    }
+
+    .badge {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: crimson;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 20px;
+    }
+
+    .cards {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .cards div {
+        background: #eee;
+        padding: 15px;
+        flex: 1;
+    }
+</style>
+</head>
+<body>
+
+<div class="page">
+    <div class="sidebar">Sidebar</div>
+    <div class="content">
+        <div class="badge">NEW</div>
+        Main Content
+        <div class="cards">
+            <div>Item 1</div>
+            <div>Item 2</div>
+            <div>Item 3</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
