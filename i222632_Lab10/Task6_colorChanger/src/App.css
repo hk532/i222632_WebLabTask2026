@@ -1,0 +1,103 @@
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 32px;
+  color: #ffffff;
+}
+
+h2 {
+  font-size: 1.1rem;
+  margin-bottom: 14px;
+  color: #cccccc;
+}
+
+h3 {
+  font-size: 1rem;
+  margin-bottom: 12px;
+  color: #cccccc;
+}
+
+.section {
+  margin-bottom: 36px;
+}
+
+.color-box {
+  width: 150px;
+  height: 150px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.input-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.input-row input {
+  flex: 1;
+  padding: 10px 14px;
+  font-size: 0.9rem;
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  border: 1px solid #333;
+  border-radius: 4px;
+  outline: none;
+}
+
+.input-row input:focus {
+  border-color: #888;
+}
+
+button {
+  padding: 10px 18px;
+  font-size: 0.85rem;
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  border: 1px solid #333;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+button:hover {
+  background-color: #2a2a2a;
+  border-color: #555;
+}
+
+.comparison {
+  margin-top: 20px;
+}
+
+.comparison p {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.comparison strong {
+  color: #ffffff;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 14px;
+  font-size: 0.85rem;
+}
+
+th,
+td {
+  border: 1px solid #333;
+  padding: 10px 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+td {
+  background-color: #111;
+}
