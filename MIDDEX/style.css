@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #f5f5f5;
+}
+
+header {
+  background: #222;
+  color: white;
+  padding: 10px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  background: white;
+  padding: 10px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+main {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+}
+
+#taskList {
+  flex: 3;
+}
+
+aside {
+  flex: 1;
+  background: white;
+  padding: 10px;
+}
+
+.task {
+  background: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-left: 5px solid gray;
+  position: relative;
+}
+
+.task.critical { border-color: red; }
+.task.high { border-color: orange; }
+.task.medium { border-color: green; }
+
+.status {
+  padding: 4px 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.pending { background: lightyellow; }
+.active { background: lightblue; }
+.completed { background: lightgreen; }
+
+.assign-dropdown {
+  position: absolute;
+  background: white;
+  border: 1px solid #ccc;
+  z-index: 10;
+}
+
+.assign-dropdown div {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.assign-dropdown div:hover {
+  background: #eee;
+}
+
+/* DELETE ANIMATION */
+.task.removing {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* MODAL */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background: white;
+  width: 300px;
+  margin: 100px auto;
+  padding: 20px;
+}
+
+.hidden { display: none; }
+
+#fab {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 24px;
+  border-radius: 50%;
+  padding: 15px;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Relief Coordination Portal</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<header>
+  <h2>Relief Coordination Dashboard</h2>
+</header>
+
+<section class="stats">
+  <div>Active Tasks: <span id="activeCount">0</span></div>
+  <div>Critical: <span id="criticalCount">0</span></div>
+  <div>Volunteers: <span id="volCount">0</span></div>
+  <div>Completed: <span id="completedCount">0</span></div>
+</section>
+
+<section class="controls">
+  <div class="filters">
+    <button class="filter active" data-filter="all">All</button>
+    <button class="filter" data-filter="critical">Critical</button>
+    <button class="filter" data-filter="high">High</button>
+    <button class="filter" data-filter="medium">Medium</button>
+  </div>
+  <input type="text" id="search" placeholder="Search tasks...">
+</section>
+
+<main>
+  <div id="taskList"></div>
+
+  <aside>
+    <h3>Available Volunteers</h3>
+    <div id="volList"></div>
+    <button id="openVolModal">+ Register Volunteer</button>
+  </aside>
+</main>
+
+<!-- FAB -->
+<button id="fab">+</button>
+
+<!-- TASK MODAL -->
+<div id="taskModal" class="modal hidden">
+  <div class="modal-content" tabindex="0">
+    <h3>Create Task</h3>
+
+    <input id="title" placeholder="Task Title">
+    <div class="error" id="titleError"></div>
+
+    <select id="priority">
+      <option value="critical">Critical</option>
+      <option value="high">High</option>
+      <option value="medium">Medium</option>
+    </select>
+
+    <input id="minVol" type="number" placeholder="Min Volunteers">
+
+    <textarea id="desc" maxlength="200"></textarea>
+    <div id="charCount">200</div>
+
+    <div class="skills">
+      <label><input type="checkbox" value="medical"> Medical</label>
+      <label><input type="checkbox" value="logistics"> Logistics</label>
+      <label><input type="checkbox" value="engineering"> Engineering</label>
+      <label><input type="checkbox" value="search"> Search & Rescue</label>
+    </div>
+
+    <button id="createTask">Create Task</button>
+    <button id="closeTaskModal">Cancel</button>
+  </div>
+</div>
+
+<!-- VOLUNTEER MODAL -->
+<div id="volModal" class="modal hidden">
+  <div class="modal-content" tabindex="0">
+    <h3>Register Volunteer</h3>
+
+    <input id="vName" placeholder="Name">
+    <input id="vEmail" placeholder="Email">
+
+    <div class="skills">
+      <label><input type="checkbox" value="medical"> Medical</label>
+      <label><input type="checkbox" value="logistics"> Logistics</label>
+      <label><input type="checkbox" value="engineering"> Engineering</label>
+      <label><input type="checkbox" value="search"> Search & Rescue</label>
+    </div>
+
+    <button id="addVolunteer">Submit</button>
+    <button id="closeVolModal">Cancel</button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
